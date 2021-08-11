@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default const () => {
+export default () => {
     return (
         <div>
             <h4>Map</h4>
