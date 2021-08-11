@@ -4,6 +4,33 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import PlaceDetails from '../PlaceDetails';
 import useStyles from './styles';
 
+const places = [
+    {
+        name:"Cool Place"
+    },
+    {
+        name:"Good Pub"
+    },{
+        name:"Cool Hotel"
+    },
+    {
+        name:"Cool Place"
+    },
+    {
+        name:"Good Pub"
+    },{
+        name:"Cool Hotel"
+    },
+    {
+        name:"Cool Place"
+    },
+    {
+        name:"Good Pub"
+    },{
+        name:"Cool Hotel"
+    }
+]
+
 export default () => {
     const classes = useStyles()
     const [type, setType] = useState("restaurants");
@@ -28,6 +55,14 @@ export default () => {
                     <MenuItem value={4.5}>Above 4.5</MenuItem>
                 </Select>
             </FormControl>
+            <Grid container spacing={3} className={classes.list}>
+                {places?.map((place, i)=>(
+                    <Grid item key={i} xs={12}>
+                        <PlaceDetails place={place} />
+                    </Grid>
+                ))}
+
+            </Grid>
         </div>
     )
 }
