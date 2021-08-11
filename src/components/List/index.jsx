@@ -4,37 +4,11 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import PlaceDetails from '../PlaceDetails';
 import useStyles from './styles';
 
-const places = [
-    {
-        name:"Cool Place"
-    },
-    {
-        name:"Good Pub"
-    },{
-        name:"Cool Hotel"
-    },
-    {
-        name:"Cool Place"
-    },
-    {
-        name:"Good Pub"
-    },{
-        name:"Cool Hotel"
-    },
-    {
-        name:"Cool Place"
-    },
-    {
-        name:"Good Pub"
-    },{
-        name:"Cool Hotel"
-    }
-]
-
-export default () => {
+export default ({places}) => {
     const classes = useStyles()
     const [type, setType] = useState("restaurants");
     const [rating, setRating] = useState("");
+    
     return (
         <div className={classes.container}>
             <Typography variant="h4">Restraurants, Hotels & Attractions around you</Typography>
