@@ -4,7 +4,7 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import PlaceDetails from '../PlaceDetails';
 import useStyles from './styles';
 
-export default ({places}) => {
+export default ({places, childClicked}) => {
     const classes = useStyles()
     const [type, setType] = useState("restaurants");
     const [rating, setRating] = useState("");
