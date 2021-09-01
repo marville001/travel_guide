@@ -12,7 +12,7 @@ import {
 import PlaceDetails from "../PlaceDetails";
 import useStyles from "./styles";
 
-export default ({ places, childClicked, loading }) => {
+const List = ({ places, childClicked, loading }) => {
   const classes = useStyles();
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
@@ -24,8 +24,7 @@ export default ({ places, childClicked, loading }) => {
       .fill()
       .map((_, i) => elRefs[i] || createRef());
     setElRefs(refs);
-    console.log({childClicked});
-  }, [places]); 
+  }, [places, elRefs]);
 
   return (
     <div className={classes.container}>
@@ -71,3 +70,4 @@ export default ({ places, childClicked, loading }) => {
     </div>
   );
 };
+export default List;

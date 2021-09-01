@@ -4,10 +4,16 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 
-import mapStyles from "../mapStyle";
+// import {mapStyles} from "../mapStyle";
 import useStyles from './styles.js';
 
-export default ({setCoordinates, setBounds, coordinates, places, setChildClicked}) => {
+const Map =  ({
+    setCoordinates, 
+    setBounds, 
+    coordinates, 
+    places, 
+    setChildClicked}
+    ) => {
     const matches = useMediaQuery('(min-width:600px)');
     const classes = useStyles();
     
@@ -56,3 +62,4 @@ export default ({setCoordinates, setBounds, coordinates, places, setChildClicked
         </div>
     )
 }
+export default Map;
