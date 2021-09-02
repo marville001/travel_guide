@@ -1,3 +1,3 @@
 # Travel Advisor
 
----> https://my-advisor.netlify.app/
+---> [**DEMO APP**](https://my-advisor.netlify.app/)
